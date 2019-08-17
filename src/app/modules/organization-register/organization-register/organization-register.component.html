@@ -1,0 +1,104 @@
+<div>
+
+  <div [formGroup]="organizationForm" class="col-md-4">
+
+    <div class="text-center">
+      <h5 style="color: #03cece;">Basic Information</h5>
+    </div>
+
+    <div >
+      <div>
+        <label class="m-0">Company name</label>
+      </div>
+      <div>
+        <input type="text" formControlName="companyName" class="full-width" placeholder="Ex: Abc communication">
+      </div>
+    </div>
+
+    <div class="m-t-10" >
+      <div>
+        <label class="m-0">Email address</label>
+      </div>
+      <div>
+        <input type="text" formControlName="emailAddress" class="full-width" placeholder="abc@example.com">
+      </div>
+    </div>
+
+
+    <div class="m-0 m-t-10 row ">
+
+      <div class="col-md-6 p-0">
+        <div class="p-r-5">
+          <div>
+            <label class="m-0">Admin name</label>
+          </div>
+          <div>
+            <input type="text" formControlName="owner" class="full-width" placeholder="Adb admin">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 p-0">
+        <div >
+          <div>
+            <label class="m-0">Contact number</label>
+          </div>
+          <div>
+            <input type="text" formControlName="contactNumber" class="full-width" placeholder="07X-XXXXXXX">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Admin user name</label>
+      </div>
+      <div>
+        <input type="text" formControlName="userName" class="full-width" placeholder="user">
+      </div>
+    </div>
+
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Password</label>
+      </div>
+      <div>
+        <input type="text" formControlName="userPassword" class="full-width" placeholder="secure password">
+      </div>
+    </div>
+
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Confirm password</label>
+      </div>
+      <div>
+        <input type="text" formControlName="confirmPassword" class="full-width" placeholder="retype above password">
+      </div>
+    </div>
+
+    <div class="m-t-10">
+      <button class="btn-err">Reset</button> &nbsp;
+      <button class="btn-suc">Create account</button>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Subscription plan selection  -->
+  <div class="col-md-4">
+
+    <div class="text-center">
+      <h5 style="color: #03cece;">Subscription Plan</h5>
+    </div>
+
+    <div>
+
+    </div>
+
+  </div>
+
+
+</div>
