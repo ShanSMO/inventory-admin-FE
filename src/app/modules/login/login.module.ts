@@ -5,10 +5,13 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { VerifyLoginComponent } from './verify-login/verify-login.component';
 
-
-
 @NgModule({
-  declarations: [LoginComponent, ForgotPasswordComponent, ResetPasswordComponent, VerifyLoginComponent],
+  declarations: [
+    LoginComponent,
+    ForgotPasswordComponent,
+    ResetPasswordComponent,
+    VerifyLoginComponent
+  ],
   imports: [
     CommonModule
   ]
