@@ -1,0 +1,53 @@
+<div>
+
+  <!-- Step Viewer-->
+  <div class="col-md-4">
+
+    <div class="w-inner-div">
+      <div class="w-step w-s-active">
+        <div style="width:100%;padding: 15px;display: flex;">
+          <div class="w-s-i">
+            <span>1</span>
+          </div>
+          <div>
+            <p class="w-s-l">Basic Details</p>
+          </div>
+        </div>
+        <div style="width: 1px;background: #dfdfdf;"></div>
+      </div>
+
+      <div class="w-step">
+        <div style="width:100%;padding: 15px;display: flex;">
+          <div class="w-s-i">
+            <span>2</span>
+          </div>
+          <div>
+            <p class="w-s-l">Subscription Details</p>
+          </div>
+        </div>
+        <div style="width: 1px;background: #dfdfdf;"></div>
+      </div>
+
+      <div class="w-step">
+        <div style="width:100%;padding: 15px;display: flex;">
+          <div class="w-s-i">
+            <span>3</span>
+          </div>
+          <div>
+            <p class="w-s-l">Summary</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+  </div>
+
+  <app-organization-register (stepStatus)="getStepStatus($event)" *ngIf="step == 1 "></app-organization-register>
+  <app-organiation-wizard-subscription-plan *ngIf="step == 2 "></app-organiation-wizard-subscription-plan>
+
+</div>
