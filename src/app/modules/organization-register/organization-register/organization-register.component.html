@@ -1,6 +1,6 @@
 <div>
 
-  <div [formGroup]="organizationForm" class="col-md-4">
+  <div [formGroup]="organizationForm">
 
     <div class="text-center">
       <h5 style="color: #03cece;">Basic Information</h5>
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <div class="m-t-10">
+    <div class="m-t-10" style="position: fixed;bottom: 25px;">
       <button class="btn-err">Reset</button> &nbsp;
       <button class="btn-suc" (click)="saveAndNext()">Create account</button>
     </div>
