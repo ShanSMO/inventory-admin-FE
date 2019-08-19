@@ -1,13 +1,55 @@
 <div>
   <!-- Subscription plan selection  -->
-  <div class="col-md-4">
+  <div>
 
     <div class="text-center">
-      <h5 style="color: #03cece;">Subscription Plan</h5>
+      <h5 style="color: #03cece;">Select subscription plan</h5>
     </div>
 
-    <div>
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Subscription plan</label>
+      </div>
+      <div>
+        <select class="full-width">
+          <option>Basic</option>
+          <option>Personal</option>
+          <option>Commercial</option>
+        </select>
+      </div>
+    </div>
 
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Repayment period</label>
+      </div>
+      <div>
+        <select class="full-width">
+          <option>Daily</option>
+          <option>Weekly</option>
+          <option>Monthly</option>
+          <option>Annualy</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="m-t-10">
+      <div>
+        <label class="m-0">Default payment method</label>
+      </div>
+      <div>
+        <select class="full-width">
+          <option>Visa/Master</option>
+          <option>Bank Transfer</option>
+          <option>Paypal</option>
+        </select>
+      </div>
+    </div>
+
+
+    <div class="m-t-10" style="position: fixed;bottom: 25px;">
+      <button class="btn-suc" (click)="goToPage('BACK')">Back</button> &nbsp;
+      <button class="btn-suc" (click)="goToPage('NEXT')">Next</button>
     </div>
 
   </div>
