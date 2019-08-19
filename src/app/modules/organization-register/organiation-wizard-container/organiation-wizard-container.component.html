@@ -23,7 +23,7 @@
               <span>2</span>
             </div>
             <div>
-              <p class="w-s-l">Subscription Details</p>
+              <p class="w-s-l">Company Logo</p>
             </div>
           </div>
           <div style="width: 1px;background: #dfdfdf;"></div>
@@ -35,6 +35,18 @@
               <span>3</span>
             </div>
             <div>
+              <p class="w-s-l">Subscription Details</p>
+            </div>
+          </div>
+          <div style="width: 1px;background: #dfdfdf;"></div>
+        </div>
+
+        <div [class]="step == 4 ? 'w-s-active w-step': 'w-step' ">
+          <div style="width:100%;padding: 15px;display: flex;">
+            <div class="w-s-i">
+              <span>4</span>
+            </div>
+            <div>
               <p class="w-s-l">Summary</p>
             </div>
           </div>
@@ -44,8 +56,9 @@
 
     <div class="col-md-7" style="margin: 0 auto;">
       <app-organization-register (stepStatus)="getStepStatus($event)" *ngIf="step == 1 "></app-organization-register>
-      <app-organiation-wizard-subscription-plan *ngIf="step == 2 " (stepStatus)="getStepStatus($event)"></app-organiation-wizard-subscription-plan>
-      <app-organization-wizard-summary *ngIf="step == 3 " (stepStatus)="getStepStatus($event)"></app-organization-wizard-summary>
+      <app-organiation-wizard-subscription-plan *ngIf="step == 3 " (stepStatus)="getStepStatus($event)"></app-organiation-wizard-subscription-plan>
+      <app-organization-wizard-summary *ngIf="step == 4 " (stepStatus)="getStepStatus($event)"></app-organization-wizard-summary>
+      <app-organization-logo-upload *ngIf="step == 2 " (stepStatus)="getStepStatus($event)"></app-organization-logo-upload>
     </div>
   </div>
 

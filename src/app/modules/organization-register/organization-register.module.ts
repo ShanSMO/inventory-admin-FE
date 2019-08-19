@@ -6,6 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import { OrganiationWizardContainerComponent } from './organiation-wizard-container/organiation-wizard-container.component';
 import { OrganiationWizardSubscriptionPlanComponent } from './organiation-wizard-subscription-plan/organiation-wizard-subscription-plan.component';
 import { OrganizationWizardSummaryComponent } from './organization-wizard-summary/organization-wizard-summary.component';
+import { OrganizationLogoUploadComponent } from './organization-logo-upload/organization-logo-upload.component';
 
 
 
@@ -14,7 +15,8 @@ import { OrganizationWizardSummaryComponent } from './organization-wizard-summar
     OrganizationRegisterComponent,
     OrganiationWizardContainerComponent,
     OrganiationWizardSubscriptionPlanComponent,
-    OrganizationWizardSummaryComponent
+    OrganizationWizardSummaryComponent,
+    OrganizationLogoUploadComponent
   ],
   imports: [
     FormsModule,

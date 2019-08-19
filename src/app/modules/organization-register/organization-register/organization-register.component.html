@@ -2,7 +2,7 @@
 
   <div [formGroup]="organizationForm">
 
-    <div class="text-center">
+    <div class="text-center m-t-5">
       <h5 style="color: #03cece;">Basic Information</h5>
     </div>
 
@@ -79,7 +79,12 @@
 
     <div class="m-t-10" style="position: fixed;bottom: 25px;">
       <button class="btn-err">Reset</button> &nbsp;
-      <button class="btn-suc" (click)="saveAndNext()">Create account</button>
+      <button class="btn-suc" (click)="saveAndNext()">
+        <span>Next</span>
+        <span>
+          &nbsp;<i class="fa fa-arrow-circle-right"></i>&nbsp;
+        </span>
+      </button>
     </div>
 
   </div>

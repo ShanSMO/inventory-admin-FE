@@ -19,14 +19,14 @@ export class OrganiationWizardSubscriptionPlanComponent implements OnInit {
 
     if (direction === 'NEXT') {
       object = {
-        currentStep: 2,
-        nextStep: 3,
+        currentStep: 3,
+        nextStep: 4,
         status: 'FINISHED'
       };
     } else {
       object = {
-        currentStep: 2,
-        nextStep: 1,
+        currentStep: 3,
+        nextStep: 2,
         status: 'FINISHED'
       };
     }

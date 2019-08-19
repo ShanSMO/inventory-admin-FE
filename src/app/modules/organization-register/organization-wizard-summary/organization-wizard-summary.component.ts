@@ -19,14 +19,14 @@ export class OrganizationWizardSummaryComponent implements OnInit {
 
     if (direction == 'NEXT') {
       object = {
-        currentStep: 3,
+        currentStep: 4,
         nextStep: -1,
         status: 'FINISHED'
       };
     } else {
       object = {
-        currentStep: 3,
-        nextStep: 2,
+        currentStep: 4,
+        nextStep: 3,
         status: 'FINISHED'
       };
     }
