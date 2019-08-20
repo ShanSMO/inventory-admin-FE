@@ -8,10 +8,31 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class OrganizationLogoUploadComponent implements OnInit {
 
   @Output() stepStatus: EventEmitter<any> = new EventEmitter();
+  browsedImage: any = '';
+  selectedFile: any = null;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  logoUpdatePreview($event): void {
+      this.readFile($event);
+  }
+
+  readFile(event): void {
+    const file: File = event.target.files[0];
+    this.selectedFile = file;
+
+    if (file) {
+      const fileReader: FileReader = new FileReader();
+
+      fileReader.onload = (e) => {
+        this.browsedImage = fileReader.result;
+      };
+
+      fileReader.readAsDataURL(file);
+    }
   }
 
   goToPage(direction) {
