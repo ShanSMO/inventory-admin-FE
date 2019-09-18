@@ -6,6 +6,7 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { VerifyLoginComponent } from './verify-login/verify-login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import {RouterModule} from "@angular/router";
+import { LoginLayoutComponent } from './login-layout/login-layout.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {RouterModule} from "@angular/router";
     ForgotPasswordComponent,
     ResetPasswordComponent,
     VerifyLoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    LoginLayoutComponent
   ],
   imports: [
     CommonModule,

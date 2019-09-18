@@ -5,12 +5,19 @@ import {OrganizationRegisterComponent} from './modules/organization-register/org
 import {OrganiationWizardContainerComponent} from "./modules/organization-register/organiation-wizard-container/organiation-wizard-container.component";
 import {DashboardComponent} from "./modules/dashboard/dashboard/dashboard.component";
 import {SignUpComponent} from "./modules/login/sign-up/sign-up.component";
+import {LoginLayoutComponent} from "./modules/login/login-layout/login-layout.component";
+import {ForgotPasswordComponent} from "./modules/login/forgot-password/forgot-password.component";
 
 
 const routes: Routes = [
   {path: 'org-create', component: OrganiationWizardContainerComponent},
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'sign-up', component: SignUpComponent},
+
+  {path: '', component: LoginLayoutComponent, children: [
+    {path: 'sign-up', component: SignUpComponent},
+    {path: 'login', component: LoginComponent},
+    {path: 'forgot-password', component: ForgotPasswordComponent},
+  ]},
   {path: '**', component: LoginComponent}
 ];
 
