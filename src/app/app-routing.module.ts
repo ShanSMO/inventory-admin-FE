@@ -3,10 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {LoginComponent} from './modules/login/login/login.component';
 import {OrganizationRegisterComponent} from './modules/organization-register/organization-register/organization-register.component';
 import {OrganiationWizardContainerComponent} from "./modules/organization-register/organiation-wizard-container/organiation-wizard-container.component";
+import {DashboardComponent} from "./modules/dashboard/dashboard/dashboard.component";
+import {SignUpComponent} from "./modules/login/sign-up/sign-up.component";
 
 
 const routes: Routes = [
   {path: 'org-create', component: OrganiationWizardContainerComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'sign-up', component: SignUpComponent},
   {path: '**', component: LoginComponent}
 ];
 

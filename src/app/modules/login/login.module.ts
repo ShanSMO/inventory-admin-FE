@@ -4,16 +4,20 @@ import { LoginComponent } from './login/login.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { VerifyLoginComponent } from './verify-login/verify-login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     LoginComponent,
     ForgotPasswordComponent,
     ResetPasswordComponent,
-    VerifyLoginComponent
+    VerifyLoginComponent,
+    SignUpComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class LoginModule { }
