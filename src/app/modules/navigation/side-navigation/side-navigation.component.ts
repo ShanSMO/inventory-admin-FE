@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-side-navigation',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavigationComponent implements OnInit {
 
-  constructor() { }
+  activeMenu: any = 'm1';
+
+  constructor() {
+  }
 
   ngOnInit() {
+
   }
 
 }

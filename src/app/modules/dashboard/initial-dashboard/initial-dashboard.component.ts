@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-initial-dashboard',
@@ -11,11 +12,22 @@ export class InitialDashboardComponent implements OnInit {
     {id: 1, name: 'HP Pharmacy', domain: 'PHARMACY'},
     {id: 2, name: 'E-Com', domain: 'COMMUNICATION'},
     {id: 3, name: 'CC-Tech', domain: 'COMPUTER'},
+    {id: 3, name: 'Sena Super Center', domain: 'GROCERY'},
+    {id: 3, name: 'Shanika Fresh Fruit', domain: 'GROCERY'},
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  addNewBusiness() {
+    const object = {
+      id: 1, name: 'Test', domain: 'PHARMACY'
+    };
+
+    this.registeredBusinessList.push(object);
+    // this.router.navigateByUrl('/wizard');
   }
 
 }
