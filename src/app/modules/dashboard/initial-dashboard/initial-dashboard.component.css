@@ -1,0 +1,30 @@
+.bu-div {
+  width: 200px;
+  height: 250px;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.logo-img {
+  width: 100%;
+  padding: 30px;
+  transition: 0.2s;
+}
+
+.bu-item:hover {
+  box-shadow: 0 0 8px 1px #e9f91a;
+}
+.bu-item:hover .logo-img {
+  transform: scale(1.05);
+}
+
+.bu-item {
+  transition: 0.2s;
+  box-shadow: 0 0 8px 1px #4a4a4a;
+  background: #ffffff;
+  height: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=initial-dashboard.component.css.map */

@@ -1,0 +1,29 @@
+<div style="padding-left: 50px;padding-top: 100px; ">
+
+  <!-- Business List -->
+  <div style="display: flex;padding-left: 100px;">
+    <div *ngFor="let businessUnit of registeredBusinessList" class="bu-div">
+      <div class="bu-item" style="">
+        <div>
+          <img src="./assets/images/logo-img.png" class="logo-img">
+        </div>
+        <div style="font-size: 15px;font-weight: 600;color: #585858;">
+          {{businessUnit.name}}
+        </div>
+
+      </div>
+    </div>
+    <div class="bu-div">
+      <div class="bu-item">
+        <div>
+          <img src="./assets/images/add-new.png" class="logo-img">
+        </div>
+        <div style="font-size: 15px;font-weight: 600;color: #2a9a92;">
+          Add new
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

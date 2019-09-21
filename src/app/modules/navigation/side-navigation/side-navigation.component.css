@@ -1,0 +1,27 @@
+.side-nav-div {
+  position: fixed;
+  width: 55px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0);
+  top: 100px;
+}
+
+.menu-ul {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+}
+.menu-ul li {
+  transition: 0.2s;
+  padding: 13px;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+}
+.menu-ul li:hover {
+  color: #03e2e2;
+  background: rgba(68, 85, 85, 0.23);
+}
+
+/*# sourceMappingURL=side-navigation.component.css.map */

@@ -15,7 +15,8 @@ import {OrganizationRegisterModule} from './modules/organization-register/organi
     DashboardModule,
     LoginModule,
     OrganizationRegisterModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

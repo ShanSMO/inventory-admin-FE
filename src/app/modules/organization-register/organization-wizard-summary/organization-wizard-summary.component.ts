@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-organization-wizard-summary',
@@ -9,7 +10,7 @@ export class OrganizationWizardSummaryComponent implements OnInit {
 
   @Output() stepStatus: EventEmitter<any> = new EventEmitter();
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit() {
   }
@@ -32,6 +33,10 @@ export class OrganizationWizardSummaryComponent implements OnInit {
     }
 
     this.stepStatus.emit(object);
+  }
+
+  finish() {
+    this.route.navigateByUrl('/dashboard');
   }
 
 }
