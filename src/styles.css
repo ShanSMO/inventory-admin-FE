@@ -204,11 +204,13 @@ input[type=text], input[type=password], input[type=tel], input[type=date], selec
 
 button {
   height: 35px;
-  border-radius: 3px;
   border: 1px solid #cecece;
   font-size: 14px;
-  font-weight: 500;
   text-transform: uppercase;
+  padding: 0 15px !important;
+  border-radius: 2px !important;
+  min-width: 80px;
+  font-weight: 500 !important;
 }
 
 .btn-suc {

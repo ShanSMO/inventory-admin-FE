@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import {DashboardModule} from './modules/dashboard/dashboard.module';
 import {LoginModule} from './modules/login/login.module';
 import {OrganizationRegisterModule} from './modules/organization-register/organization-register.module';
+import {ChartsModule} from './modules/charts/charts.module';
+import {MessagesModule} from './modules/messages/messages.module';
+import {SettingsModule} from "./modules/settings/settings.module";
 
 @NgModule({
   declarations: [
@@ -16,7 +19,9 @@ import {OrganizationRegisterModule} from './modules/organization-register/organi
     LoginModule,
     OrganizationRegisterModule,
     AppRoutingModule,
-
+    ChartsModule,
+    MessagesModule,
+    SettingsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

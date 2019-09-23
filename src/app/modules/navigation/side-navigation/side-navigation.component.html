@@ -1,12 +1,12 @@
 <div class="side-nav-div">
 
   <ul class="menu-ul">
-    <li [class]="activeMenu == 'm1' ? 'active mi': 'mi'" id="m1">
+    <li [class]="activeMenu == 'm1' ? 'active mi': 'mi'" id="m1" routerLink="/dashboard">
       <span>
         <i class="zmdi zmdi-view-dashboard"></i>
       </span>
     </li>
-    <li [class]="activeMenu == 'm2' ? 'active mi': 'mi'" id="m2">
+    <li [class]="activeMenu == 'm2' ? 'active mi': 'mi'" id="m2" routerLink="/settings">
       <span>
         <i class="fa fa-gear"></i>
       </span>
@@ -19,7 +19,7 @@
         </div>
       </span>
     </li>
-    <li [class]="activeMenu == 'm4' ? 'active mi': 'mi'" id="m4">
+    <li [class]="activeMenu == 'm4' ? 'active mi': 'mi'" id="m4" routerLink="/chart">
       <span>
         <i class="fa fa-bar-chart" aria-hidden="true"></i>
       </span>

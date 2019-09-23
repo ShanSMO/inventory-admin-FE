@@ -6,11 +6,21 @@ import {SignUpComponent} from './modules/login/sign-up/sign-up.component';
 import {LoginLayoutComponent} from './modules/login/login-layout/login-layout.component';
 import {ForgotPasswordComponent} from './modules/login/forgot-password/forgot-password.component';
 import {DashboardContainerComponent} from './modules/dashboard/dashboard-container/dashboard-container.component';
+import {InitialDashboardComponent} from './modules/dashboard/initial-dashboard/initial-dashboard.component';
+import {LineChartComponent} from './modules/charts/line-chart/line-chart.component';
+import {SettingLayoutComponent} from "./modules/settings/setting-layout/setting-layout.component";
+import {BillingComponent} from "./modules/settings/billing/billing.component";
 
 
 const routes: Routes = [
   {path: 'org-create', component: OrganiationWizardContainerComponent},
-  {path: 'dashboard', component: DashboardContainerComponent},
+  {path: '', component: DashboardContainerComponent, children: [
+    {path: 'dashboard', component: InitialDashboardComponent},
+    {path: 'chart', component: LineChartComponent},
+    {path: 'settings', component: SettingLayoutComponent, children: [
+      {path: 'billing-settings', component: BillingComponent},
+    ]}
+  ]},
 
   {path: '', component: LoginLayoutComponent, children: [
     {path: 'sign-up', component: SignUpComponent},
