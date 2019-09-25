@@ -1,0 +1,19 @@
+table thead {
+  background: #31495f;
+  font-size: 13px;
+  color: #fff;
+}
+table thead tr th {
+  padding: 8px;
+  font-weight: 500;
+  border: none;
+}
+table tbody {
+  font-size: 13px;
+}
+table tbody tr td {
+  border: none;
+  padding: 5px !important;
+}
+
+/*# sourceMappingURL=table.css.map */
