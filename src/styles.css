@@ -236,15 +236,15 @@ table thead {
   color: #fff;
 }
 table thead tr th {
-  padding: 8px;
+  padding: 5px !important;
   font-weight: 500;
-  border: none;
+  border: none !important;
 }
 table tbody {
   font-size: 13px;
 }
 table tbody tr td {
-  border: none;
+  border: none !important;
   padding: 5px !important;
 }
 

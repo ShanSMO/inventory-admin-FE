@@ -14,7 +14,7 @@ import {ControlValueAccessor, FormGroup, NG_VALUE_ACCESSOR} from '@angular/forms
 export class NgNumberPickerComponent implements OnInit,  ControlValueAccessor {
 
   @Input() numberForm: FormGroup ;
-  value = 0;
+  @Input() value: any = 0;
 
   constructor() {}
 

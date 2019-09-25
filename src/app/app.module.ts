@@ -8,6 +8,8 @@ import {OrganizationRegisterModule} from './modules/organization-register/organi
 import {ChartsModule} from './modules/charts/charts.module';
 import {MessagesModule} from './modules/messages/messages.module';
 import {SettingsModule} from "./modules/settings/settings.module";
+import {NgNumberPickerModule} from "./libs/ng-number-picker/ng-number-picker.module";
+import {PosModule} from "./modules/pos/pos.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {SettingsModule} from "./modules/settings/settings.module";
     AppRoutingModule,
     ChartsModule,
     MessagesModule,
-    SettingsModule
+    SettingsModule,
+    PosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
