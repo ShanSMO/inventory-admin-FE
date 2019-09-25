@@ -1,0 +1,36 @@
+<div [formGroup]="cartItemsForm">
+  <table class="table"  >
+    <thead>
+    <tr class="text-center">
+      <th>Item Name</th>
+      <th>Quantity</th>
+      <th>Unit price</th>
+      <th>Discount(%)</th>
+      <th>Total Amount</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody formArrayName="items">
+    <tr *ngFor="let item of cartItemsForm.get('items').controls;let id = index;" [formGroupName]="id">
+      <td style="width: 120px"><div>Dell laptop</div></td>
+      <td style="width: 120px;text-align: center;">
+        <app-ng-number-picker [value]="item.get('quantity').value" [numberForm]="item" formControlName="quantity"></app-ng-number-picker>
+      </td>
+      <td style="width: 120px"> <div class="values">200</div> </td>
+      <td style="width: 120px">
+        <div class="values" style="padding: 0;background: #e4e4e4;">
+          <input type="text" style="height: 30px;border: none;outline: none;background: none;">
+        </div>
+      </td>
+      <td style="width: 120px"> <div class="values">175</div></td>
+      <td style="width: 120px" class="text-center">
+        <div>
+          <span><i class="fa fa-remove"></i></span>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<button (click)="test()">Test</button>
