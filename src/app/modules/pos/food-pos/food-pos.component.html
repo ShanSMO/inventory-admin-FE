@@ -1,0 +1,95 @@
+<div class="row m-0">
+
+  <!-- Process -->
+  <div class="col-md-8 p-0">
+
+    <div>
+      <div>
+        <h3>All Items</h3>
+      </div>
+      <div style="display: flex;flex-wrap: wrap;">
+        <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
+          <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h3>Selected Items</h3>
+      </div>
+      <div style="display: flex;flex-wrap: wrap;">
+        <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
+          <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Bill -->
+  <div class="col-md-4">
+    <div style="background: #fff;">
+      <div class="text-center" style="padding: 15px;">
+        <p style="font-size: 20px;margin:0;font-weight: 400;">Checkout</p>
+      </div>
+      <div style="background: #fff;width: 100%;min-height: 400px;">
+        <div style="display: flex;padding: 5px 15px;border-bottom: 1px solid #e9ecef;background: #e4e4e4;color: #828080;font-weight: 400;">
+          <div class="text-center" style="width: 100px;">#</div>
+          <div class="full-width">Item</div>
+          <div class="full-width text-center">QTY</div>
+          <div class="full-width text-right">Sub total (Rs.)</div>
+        </div>
+
+        <div>
+          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
+            <div class="text-center" style="width: 100px;">#</div>
+            <div class="full-width">Item</div>
+            <div class="full-width text-center">1</div>
+            <div class="full-width text-right">125.00</div>
+          </div>
+
+          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
+            <div class="text-center" style="width: 100px;">#</div>
+            <div class="full-width">Item</div>
+            <div class="full-width text-center">1</div>
+            <div class="full-width text-right">200.00</div>
+          </div>
+
+          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
+            <div class="text-center" style="width: 100px;">#</div>
+            <div class="full-width">Item</div>
+            <div class="full-width text-center">1</div>
+            <div class="full-width text-right">140.00</div>
+          </div>
+
+          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
+            <div class="text-center" style="width: 100px;">#</div>
+            <div class="full-width">Item</div>
+            <div class="full-width text-center">1</div>
+            <div class="full-width text-right">100.00</div>
+          </div>
+
+          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
+            <div class="text-center" style="width: 100px;">#</div>
+            <div class="full-width">Item</div>
+            <div class="full-width text-center">1</div>
+            <div class="full-width text-right">12500.00</div>
+          </div>
+        </div>
+
+        <div style="height: 250px;background: #e4e4e4;">
+
+        </div>
+
+        <div class="text-center p-15">
+          <button class="btn btn-suc-g full-width">Pay (Rs. 13000.00)</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
