@@ -35,56 +35,76 @@
         <p style="font-size: 20px;margin:0;font-weight: 400;">Checkout</p>
       </div>
       <div style="background: #fff;width: 100%;min-height: 400px;">
-        <div style="display: flex;padding: 5px 15px;border-bottom: 1px solid #e9ecef;background: #e4e4e4;color: #828080;font-weight: 400;">
-          <div class="text-center" style="width: 100px;">#</div>
+        <div class="checkout-item-header">
+          <div class="item-num">#</div>
           <div class="full-width">Item</div>
           <div class="full-width text-center">QTY</div>
           <div class="full-width text-right">Sub total (Rs.)</div>
         </div>
 
         <div>
-          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
-            <div class="text-center" style="width: 100px;">#</div>
-            <div class="full-width">Item</div>
+          <div class="checkout-item">
+            <div class="item-num">
+              <span>
+                <i class="fa fa-minus-circle"></i>
+              </span>
+            </div>
+            <div class="full-width">Chicken role</div>
             <div class="full-width text-center">1</div>
-            <div class="full-width text-right">125.00</div>
+            <div class="full-width text-right">{{125 | currency : ' '}}</div>
           </div>
 
-          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
-            <div class="text-center" style="width: 100px;">#</div>
+          <div class="checkout-item">
+            <div class="item-num">
+              <span>
+                <i class="fa fa-minus-circle"></i>
+              </span>
+            </div>
             <div class="full-width">Item</div>
-            <div class="full-width text-center">1</div>
-            <div class="full-width text-right">200.00</div>
+            <div class="full-width text-center">8</div>
+            <div class="full-width text-right">{{125 | currency : ' '}}</div>
           </div>
 
-          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
-            <div class="text-center" style="width: 100px;">#</div>
+          <div class="checkout-item">
+            <div class="item-num">
+              <span>
+                <i class="fa fa-minus-circle"></i>
+              </span>
+            </div>
             <div class="full-width">Item</div>
-            <div class="full-width text-center">1</div>
-            <div class="full-width text-right">140.00</div>
+            <div class="full-width text-center">3</div>
+            <div class="full-width text-right">{{3000 | currency : ' '}}</div>
           </div>
 
-          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
-            <div class="text-center" style="width: 100px;">#</div>
+          <div class="checkout-item">
+            <div class="item-num">
+              <span>
+                <i class="fa fa-minus-circle"></i>
+              </span>
+            </div>
             <div class="full-width">Item</div>
-            <div class="full-width text-center">1</div>
-            <div class="full-width text-right">100.00</div>
+            <div class="full-width text-center">2</div>
+            <div class="full-width text-right">{{250 | currency : ' '}}</div>
           </div>
 
-          <div style="display: flex;padding: 15px;border-bottom: 1px solid #e9ecef;font-weight: 400;    color: #777;">
-            <div class="text-center" style="width: 100px;">#</div>
+          <div class="checkout-item">
+            <div class="item-num">
+              <span>
+                <i class="fa fa-minus-circle"></i>
+              </span>
+            </div>
             <div class="full-width">Item</div>
-            <div class="full-width text-center">1</div>
-            <div class="full-width text-right">12500.00</div>
+            <div class="full-width text-center">4</div>
+            <div class="full-width text-right">{{13500 | currency : ' '}}</div>
           </div>
         </div>
 
-        <div style="height: 250px;background: #e4e4e4;">
+        <div style="height: 150px;background: #e4e4e4;">
 
         </div>
 
         <div class="text-center p-15">
-          <button class="btn btn-suc-g full-width">Pay (Rs. 13000.00)</button>
+          <button class="btn-suc-g full-width" style="text-transform: none;">Pay (Rs. {{13500 | currency : ' '}})</button>
         </div>
       </div>
 

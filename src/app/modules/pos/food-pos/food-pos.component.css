@@ -1,0 +1,29 @@
+.checkout-item-header {
+  font-size: 14px;
+  display: flex;
+  padding: 2px 15px;
+  border-bottom: 1px solid #e9ecef;
+  background: #e4e4e4;
+  color: #828080;
+  font-weight: 600;
+}
+
+.checkout-item {
+  font-size: 14px;
+  display: flex;
+  padding: 5px 15px;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 400;
+  color: #777;
+}
+
+.item-num {
+  width: 100px;
+  text-align: center;
+}
+
+.fa-minus-circle {
+  color: #ed251d;
+}
+
+/*# sourceMappingURL=food-pos.component.css.map */
