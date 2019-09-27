@@ -25,6 +25,9 @@ export class FoodPosComponent implements OnInit {
 
   itemArray: FormArray;
   form: FormGroup = new FormGroup({
+    totalPrice: new FormControl(100),
+    discount: new FormControl(25),
+    tax: new FormControl(0),
     items: new FormArray([])
   });
 
@@ -43,7 +46,10 @@ export class FoodPosComponent implements OnInit {
 
   addFormGroup(): FormGroup {
     return this.fb.group({
-      quantity: new FormControl(1)
+      itemName: new FormControl('Fish Bun'),
+      unitPrice: new FormControl(35),
+      quantity: new FormControl(1),
+      subTotal: new FormControl(300)
     });
   }
 

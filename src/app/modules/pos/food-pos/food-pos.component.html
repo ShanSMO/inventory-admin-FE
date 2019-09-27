@@ -2,35 +2,23 @@
 
   <!-- Process -->
   <div class="col-md-8 p-0">
-
-    <div>
+    <div style="background: #fffdfe;padding: 15px;box-shadow: 0 0 5px 0 #d2d1d1;border-radius: 5px;border: 1px solid #f7f7f7;">
       <div>
-        <h3>All Items</h3>
-      </div>
-      <div style="display: flex;flex-wrap: wrap;">
-        <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
-          <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
+        <div>
+          <h3>All Items</h3>
+        </div>
+        <div style="display: flex;flex-wrap: wrap;">
+          <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
+            <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div>
-      <div>
-        <h3>Selected Items</h3>
-      </div>
-      <div style="display: flex;flex-wrap: wrap;">
-        <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
-          <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
-        </div>
-      </div>
-
-    </div>
-
   </div>
 
   <!-- Bill -->
   <div class="col-md-4">
-    <div style="background: #fff;">
+    <div style="background: #fff;box-shadow: 0 0 5px 0 #d2d1d1;border-radius: 5px;border: 1px solid #f7f7f7;">
       <div class="text-center" style="padding: 15px;">
         <p style="font-size: 20px;margin:0;font-weight: 400;">Checkout</p>
       </div>
@@ -43,33 +31,34 @@
         </div>
 
         <div formArrayName="items">
-
           <div class="checkout-item" *ngFor="let item of form.get('items').controls;let id = index;">
             <div class="item-num">
               <span>
                 <i class="fa fa-minus-circle"></i>
               </span>
             </div>
-            <div class="full-width">Item</div>
+            <div class="full-width">{{item.get('itemName').value}}</div>
             <div class="full-width text-center">
-              <app-ng-number-picker-circle  [numberForm]="item"></app-ng-number-picker-circle>
+              <app-ng-number-picker-circle  [numberForm]="item" [value]="item.get('quantity').value"></app-ng-number-picker-circle>
             </div>
-            <div class="full-width text-right">{{250 | currency : ' '}}</div>
+            <div class="full-width text-right">{{item.get('subTotal').value | currency : ' '}}</div>
           </div>
-
-
         </div>
 
         <div style="height: 150px;background: #e4e4e4;margin: 0;">
-          <div class="row m-0 p-10">
+          <div class="row m-0 p-0">
             <div class="col-md-6 ">Discount</div>
-            <div class="col-md-6 p-0">
-              <input type="text" class="">
+            <div class="col-md-6 p-10 text-right">
+              <input type="text" formControlName="discount" class="text-right">
             </div>
           </div>
-          <div class="row m-0 p-10">
+          <div class="row m-0 p-0">
             <div class="col-md-6">Total</div>
-            <div class="col-md-6 text-right">Rs. {{135000 | currency: ' '}}</div>
+            <div class="col-md-6 text-right">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
+          </div>
+          <div class="row m-0 p-0">
+            <div class="col-md-6">Tax (%)</div>
+            <div class="col-md-6 text-right">Rs. {{form.get('tax').value | currency: ' '}}</div>
           </div>
         </div>
 
