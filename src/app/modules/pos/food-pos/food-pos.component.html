@@ -24,7 +24,7 @@
       </div>
       <div style="background: #fff;width: 100%;min-height: 400px;" [formGroup]="form">
         <div class="checkout-item-header">
-          <div class="item-num">#</div>
+          <div class="item-num"></div>
           <div class="full-width">Item</div>
           <div class="full-width text-center">QTY</div>
           <div class="full-width text-right">Sub total (Rs.)</div>
@@ -33,19 +33,25 @@
         <div formArrayName="items">
           <div class="checkout-item" *ngFor="let item of form.get('items').controls;let id = index;">
             <div class="item-num">
-              <span>
-                <i class="fa fa-minus-circle"></i>
-              </span>
+              <div class="middle-al">
+                <span>
+                  <i class="fa fa-minus-circle"></i>
+                </span>
+              </div>
             </div>
-            <div class="full-width">{{item.get('itemName').value}}</div>
+            <div class="full-width">
+              <div class="middle-al">{{item.get('itemName').value}}</div>
+            </div>
             <div class="full-width text-center">
               <app-ng-number-picker-circle  [numberForm]="item" [value]="item.get('quantity').value"></app-ng-number-picker-circle>
             </div>
-            <div class="full-width text-right">{{item.get('subTotal').value | currency : ' '}}</div>
+            <div class="full-width text-right">
+              <div class="middle-al">{{item.get('subTotal').value | currency : ' '}}</div>
+            </div>
           </div>
         </div>
 
-        <div style="height: 150px;background: #e4e4e4;margin: 0;">
+        <div style="height: 150px;background: #f9f9f9;margin: 0;">
           <div class="row m-0 p-0">
             <div class="col-md-6 ">Discount</div>
             <div class="col-md-6 p-10 text-right">
