@@ -2,14 +2,14 @@
 
   <!-- Process -->
   <div class="col-md-8 p-0">
-    <div style="background: #fffdfe;padding: 15px;box-shadow: 0 0 5px 0 #d2d1d1;border-radius: 5px;border: 1px solid #f7f7f7;">
+    <div class="fd-menu-div">
       <div>
         <div>
-          <h3>All Items</h3>
+          <p class="txt-fd-menu">Food Menu</p>
         </div>
-        <div style="display: flex;flex-wrap: wrap;">
-          <div *ngFor="let item of items" style="width: 100px;height: 100px;padding: 5px;">
-            <div style="height: 100%;background: #444;color: #fff;cursor: pointer;">{{item.itemName}}</div>
+        <div class="fd-menu-items">
+          <div *ngFor="let item of items" class="menu-itm">
+            <div class="itm">{{item.itemName}}</div>
           </div>
         </div>
       </div>
@@ -18,9 +18,9 @@
 
   <!-- Bill -->
   <div class="col-md-4">
-    <div style="background: #fff;box-shadow: 0 0 5px 0 #d2d1d1;border-radius: 5px;border: 1px solid #f7f7f7;">
-      <div class="text-center" style="padding: 15px;">
-        <p style="font-size: 20px;margin:0;font-weight: 600;color: #696969;">Checkout</p>
+    <div class="receipt-container">
+      <div class="text-center p-15">
+        <p class="rec-title">Checkout</p>
       </div>
       <div style="background: #fff;width: 100%;min-height: 400px;" [formGroup]="form">
         <div class="checkout-item-header">
@@ -30,7 +30,7 @@
           <div class="full-width text-right">Sub total (Rs.)</div>
         </div>
 
-        <div formArrayName="items" style="min-height: 300px;max-height: 300px;overflow-y: auto;">
+        <div formArrayName="items" style="min-height: 250px;max-height: 250px;overflow-y: auto;">
           <div class="checkout-item" *ngFor="let item of form.get('items').controls;let id = index;">
             <div class="item-num">
               <div class="middle-al">
@@ -53,9 +53,11 @@
 
         <div style="height: 150px;background: #f9f9f9;margin: 0;">
           <div class="row m-0 p-0">
-            <div class="col-md-6 ">Discount</div>
+            <div class="col-md-6 ">
+              <div class="middle-al" style="font-size: 14px;font-weight: 600;">Discount</div>
+            </div>
             <div class="col-md-6 p-10 text-right">
-              <input type="text" formControlName="discount" class="text-right">
+              <input type="text" formControlName="discount" class="text-right full-width">
             </div>
           </div>
           <div class="row m-0 p-0" style="color: #7b7b7b;">
@@ -63,25 +65,22 @@
             <div class="col-md-6 text-right" style="font-weight: 600;font-size: 18px;">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
           </div>
           <div class="row m-0 p-0">
-            <div class="col-md-6" style="font-size: 13px;">Tax (10 %)</div>
-            <div class="col-md-6 text-right" style="font-size: 13px;">Rs. {{form.get('tax').value | currency: ' '}}</div>
+            <div class="col-md-6 txt-tax">Tax (10 %)</div>
+            <div class="col-md-6 text-right txt-tax-val">Rs. {{form.get('tax').value | currency: ' '}}</div>
           </div>
 
-
           <!-- Total -->
-          <div class="row" style="padding: 10px 0;background: #ececec;margin: 10px 0 0 0;color: #404040;">
-            <div class="col-md-6" style="font-weight: 600;font-size: 18px;">Total</div>
-            <div class="col-md-6 text-right" style="font-weight: 600;font-size: 18px;">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
+          <div class="row tot-val-div">
+            <div class="col-md-6 txt-tot">Total</div>
+            <div class="col-md-6 text-right txt-tot-val">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
           </div>
         </div>
 
         <div class="text-center p-15">
-          <button class="btn-suc-g full-width" style="text-transform: none;">Pay (Rs. {{13500 | currency : ' '}})</button>
+          <button class="btn-suc-g full-width btn-pay">Pay (Rs. {{13500 | currency : ' '}})</button>
         </div>
       </div>
 
     </div>
   </div>
-
-
 </div>

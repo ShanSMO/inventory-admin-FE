@@ -1,7 +1,27 @@
+.fd-menu-div {
+  background: #fffdfe;
+  padding: 15px;
+  box-shadow: 0 0 5px 0 #d2d1d1;
+  border-radius: 5px;
+  border: 1px solid #f7f7f7;
+}
+
+.fd-menu-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.txt-fd-menu {
+  font-weight: 600;
+  font-size: 25px;
+  color: #828080;
+  margin: 0;
+}
+
 .checkout-item-header {
   font-size: 14px;
   display: flex;
-  padding: 2px 15px;
+  padding: 5px 15px;
   border-bottom: 1px solid #e9ecef;
   background: #e4e4e4;
   color: #828080;
@@ -22,8 +42,63 @@
   text-align: center;
 }
 
+.menu-itm {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+}
+.menu-itm .itm {
+  height: 100%;
+  background: #aaaaaa;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
 .fa-minus-circle {
   color: #edc6bd;
+}
+
+.receipt-container {
+  background: #fff;
+  box-shadow: 0 0 5px 0 #d2d1d1;
+  border-radius: 5px;
+  border: 1px solid #f7f7f7;
+}
+
+.rec-title {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 600;
+  color: #696969;
+}
+
+.txt-tot {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.txt-tot-val {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.txt-tax, .txt-tax-val {
+  color: #06a262;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.tot-val-div {
+  padding: 10px 0;
+  background: #ececec;
+  margin: 10px 0 0 0;
+  color: #404040;
+}
+
+.btn-pay {
+  text-transform: none;
+  font-weight: 600 !important;
 }
 
 /*# sourceMappingURL=food-pos.component.css.map */
