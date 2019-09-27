@@ -20,7 +20,7 @@
   <div class="col-md-4">
     <div style="background: #fff;box-shadow: 0 0 5px 0 #d2d1d1;border-radius: 5px;border: 1px solid #f7f7f7;">
       <div class="text-center" style="padding: 15px;">
-        <p style="font-size: 20px;margin:0;font-weight: 400;">Checkout</p>
+        <p style="font-size: 20px;margin:0;font-weight: 600;color: #696969;">Checkout</p>
       </div>
       <div style="background: #fff;width: 100%;min-height: 400px;" [formGroup]="form">
         <div class="checkout-item-header">
@@ -30,7 +30,7 @@
           <div class="full-width text-right">Sub total (Rs.)</div>
         </div>
 
-        <div formArrayName="items">
+        <div formArrayName="items" style="min-height: 300px;max-height: 300px;overflow-y: auto;">
           <div class="checkout-item" *ngFor="let item of form.get('items').controls;let id = index;">
             <div class="item-num">
               <div class="middle-al">
@@ -58,13 +58,20 @@
               <input type="text" formControlName="discount" class="text-right">
             </div>
           </div>
-          <div class="row m-0 p-0">
-            <div class="col-md-6">Total</div>
-            <div class="col-md-6 text-right">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
+          <div class="row m-0 p-0" style="color: #7b7b7b;">
+            <div class="col-md-6" style="font-weight: 600;font-size: 16px;">Sub total</div>
+            <div class="col-md-6 text-right" style="font-weight: 600;font-size: 18px;">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
           </div>
           <div class="row m-0 p-0">
-            <div class="col-md-6">Tax (%)</div>
-            <div class="col-md-6 text-right">Rs. {{form.get('tax').value | currency: ' '}}</div>
+            <div class="col-md-6" style="font-size: 13px;">Tax (10 %)</div>
+            <div class="col-md-6 text-right" style="font-size: 13px;">Rs. {{form.get('tax').value | currency: ' '}}</div>
+          </div>
+
+
+          <!-- Total -->
+          <div class="row" style="padding: 10px 0;background: #ececec;margin: 10px 0 0 0;color: #404040;">
+            <div class="col-md-6" style="font-weight: 600;font-size: 18px;">Total</div>
+            <div class="col-md-6 text-right" style="font-weight: 600;font-size: 18px;">Rs. {{form.get('totalPrice').value | currency: ' '}}</div>
           </div>
         </div>
 
