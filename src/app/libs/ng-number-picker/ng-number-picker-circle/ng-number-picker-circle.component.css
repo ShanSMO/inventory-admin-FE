@@ -1,0 +1,50 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.control-btn {
+  border: 1px solid #6cbed1;
+  height: 30px;
+  color: #6cbed1;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.control-btn div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dec-btn-alt {
+  background: #da6b67;
+  border: 1px solid #da6b67;
+  color: #fff;
+}
+
+.inc-btn-alt {
+  background: #438a53;
+  border: 1px solid #438a53;
+  color: #fff;
+}
+
+.ic {
+  font-size: 10px;
+}
+
+.value-inp {
+  border: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+  height: 30px;
+  outline: none;
+  font-weight: 600;
+  color: #676767;
+  width: 40px;
+}
+
+/*# sourceMappingURL=ng-number-picker-circle.component.css.map */

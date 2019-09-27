@@ -1,0 +1,17 @@
+<div style="display: flex;" [formGroup]="numberForm">
+  <div (click)="remove()" class="control-btn dec-btn">
+    <div>
+      <span>
+        <i class="fa fa-minus ic"></i>
+      </span>
+    </div>
+  </div>
+  <input formControlName="quantity" min="0" [value]="value" type="number" class="value-inp">
+  <div (click)="add()" class="control-btn inc-btn">
+    <div>
+      <span>
+        <i class="fa fa-plus ic"></i>
+      </span>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-food-pos',
@@ -22,9 +23,28 @@ export class FoodPosComponent implements OnInit {
     {id: 1, itemName: 'Patis', imageUrl: null, unitPrice: 35}
   ];
 
-  constructor() { }
+  itemArray: FormArray;
+  form: FormGroup = new FormGroup({
+    items: new FormArray([])
+  });
+
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.setForm();
+  }
+
+  setForm() {
+    this.itemArray = this.form.get('items') as FormArray;
+    for (let i = 0; i < 5; i++) {
+      this.itemArray.push(this.addFormGroup());
+    }
+  }
+
+  addFormGroup(): FormGroup {
+    return this.fb.group({
+      quantity: new FormControl(1)
+    });
   }
 
 }

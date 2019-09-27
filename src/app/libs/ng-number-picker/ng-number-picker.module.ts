@@ -1,18 +1,19 @@
-import {forwardRef, NgModule} from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgNumberPickerComponent } from './ng-number-picker/ng-number-picker.component';
-import {FormsModule, NG_VALUE_ACCESSOR, ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { NgNumberPickerCircleComponent } from './ng-number-picker-circle/ng-number-picker-circle.component';
 
 
 
 @NgModule({
-  declarations: [NgNumberPickerComponent],
+  declarations: [NgNumberPickerComponent, NgNumberPickerCircleComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [NgNumberPickerComponent],
+  exports: [NgNumberPickerComponent, NgNumberPickerCircleComponent],
 
 })
 export class NgNumberPickerModule { }
