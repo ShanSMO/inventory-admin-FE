@@ -2,12 +2,29 @@
   width: 100%;
   height: 100px;
   padding: 5px;
+  position: relative;
+  border-bottom: 1px solid #ececec;
 }
 
 .fd-cat-list-inner {
   width: 100%;
   height: 100%;
   border-radius: 3px;
+}
+
+.cat-outer-div {
+  width: 120px;
+  height: 100%;
+  padding: 3px;
+}
+
+.cat-div {
+  background: #f5f5f5;
+  height: 100%;
+  border: 1px solid #b3d7ff;
+  border-radius: 3px;
+  text-align: center;
+  padding: 5px;
 }
 
 .nv-ic {
@@ -19,6 +36,10 @@
   border-radius: 50px;
   color: #fff;
   cursor: pointer;
+}
+
+.act-cat {
+  background: #5dd3f3;
 }
 
 /*# sourceMappingURL=category-slider.component.css.map */

@@ -32,9 +32,9 @@ export class FoodPosComponent implements OnInit {
 
   itemArray: FormArray;
   form: FormGroup = new FormGroup({
-    totalPrice: new FormControl(100),
-    discount: new FormControl(25),
-    tax: new FormControl(10),
+    totalPrice: new FormControl(0),
+    discount: new FormControl(0),
+    tax: new FormControl(0),
     items: new FormArray([])
   });
 
@@ -46,7 +46,7 @@ export class FoodPosComponent implements OnInit {
 
   setForm() {
     this.itemArray = this.form.get('items') as FormArray;
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 1; i++) {
       this.itemArray.push(this.addFormGroup());
     }
   }
