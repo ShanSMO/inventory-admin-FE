@@ -4,7 +4,8 @@
   <div class="col-md-8 p-0">
     <div class="fd-menu-div">
       <div>
-        <div class="full-width" style="display: inline-flex;">
+        <div class="full-width" style="display: inline-flex;    padding: 5px 10px;
+    border-bottom: 1px solid #ececec;">
           <div style="width: 80%;">
             <p class="txt-fd-menu">Food Menu</p>
           </div>
@@ -21,10 +22,8 @@
         </div>
 
         <!-- Categories -->
-        <div class="fd-cat-list">
-          <div class="fd-cat-list-inner">
-
-          </div>
+        <div>
+          <app-category-slider [categoryList]="categories"></app-category-slider>
         </div>
 
         <div class="fd-menu-items">

@@ -7,6 +7,7 @@ import {NgNumberPickerModule} from '../../libs/ng-number-picker/ng-number-picker
 import { FoodPosComponent } from './food-pos/food-pos.component';
 import { PosLayoutComponent } from './pos-layout/pos-layout.component';
 import {PaginationModule} from "../../libs/pagination/pagination.module";
+import { CategorySliderComponent } from './category-slider/category-slider.component';
 
 const routes: Routes = [
   {path: '', component: PosLayoutComponent, children: [
@@ -16,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [SalesComponent, FoodPosComponent, PosLayoutComponent],
+  declarations: [SalesComponent, FoodPosComponent, PosLayoutComponent, CategorySliderComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

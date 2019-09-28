@@ -21,6 +21,15 @@ export class FoodPosComponent implements OnInit {
     {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/10.jpg', unitPrice: 35},
   ];
 
+  categories: any[] = [
+    {id: 1, categoryName: 'coffee'},
+    {id: 1, categoryName: 'Tea'},
+    {id: 1, categoryName: 'Short Eats'},
+    {id: 1, categoryName: 'Burger'},
+    {id: 1, categoryName: 'Submarine'},
+    {id: 1, categoryName: 'Chicken Bucket'},
+  ];
+
   itemArray: FormArray;
   form: FormGroup = new FormGroup({
     totalPrice: new FormControl(100),
