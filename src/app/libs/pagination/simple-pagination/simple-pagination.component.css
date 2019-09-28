@@ -1,0 +1,11 @@
+.dir-ic-bg {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #10b5b5;
+  border-radius: 50px;
+  color: #10b5b5;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=simple-pagination.component.css.map */

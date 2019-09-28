@@ -19,7 +19,7 @@ export class SalesComponent implements OnInit {
 
   ngOnInit() {
     this.itemArray = this.cartItemsForm.get('items') as FormArray;
-    for (let i = 0; i < 15; i++) {
+    for (let i = 0; i < 5; i++) {
       this.itemArray.push(this.createSampleForm());
     }
   }

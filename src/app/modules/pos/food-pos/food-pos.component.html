@@ -4,14 +4,48 @@
   <div class="col-md-8 p-0">
     <div class="fd-menu-div">
       <div>
-        <div>
-          <p class="txt-fd-menu">Food Menu</p>
-        </div>
-        <div class="fd-menu-items">
-          <div *ngFor="let item of items" class="menu-itm">
-            <div class="itm">{{item.itemName}}</div>
+        <div class="full-width" style="display: inline-flex;">
+          <div style="width: 80%;">
+            <p class="txt-fd-menu">Food Menu</p>
+          </div>
+          <div style="display: inline-flex;">
+            <input type="text" class="itm-search" placeholder="search">
+            <div class="search-ic">
+              <div class="middle-al">
+              <span>
+                <i class="fa fa-search"></i>
+              </span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- Categories -->
+        <div class="fd-cat-list">
+          <div class="fd-cat-list-inner">
+
+          </div>
+        </div>
+
+        <div class="fd-menu-items">
+          <div *ngFor="let item of items" class="menu-itm">
+            <div class="itm text-center">
+              <div>
+                <div style="height: 100px;width: 100px;    margin: 0 auto;">
+                  <img style="width: 100%;max-height: 100%;object-fit:cover;margin-top: 10px; " [src]="item.imageUrl">
+                </div>
+              </div>
+              <div style="color: #636363">{{item.itemName}}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div>
+          <!--<input type="checkbox">-->
+          <app-simple-pagination></app-simple-pagination>
+        </div>
+
       </div>
     </div>
   </div>

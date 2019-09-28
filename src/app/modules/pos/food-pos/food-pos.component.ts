@@ -9,18 +9,16 @@ import {FormArray, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 export class FoodPosComponent implements OnInit {
 
   items: any[] = [
-    {id: 1, itemName: 'Bun', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Role', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Pan cake', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Fish bun', imageUrl: null, unitPrice: 35},
-    {id: 1, itemName: 'Patis', imageUrl: null, unitPrice: 35}
+    {id: 1, itemName: 'Bun', imageUrl: './assets/images/pos_imgs/1.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Role', imageUrl: './assets/images/pos_imgs/2.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/3.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/4.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/5.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/6.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/7.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/8.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/9.jpg', unitPrice: 35},
+    {id: 1, itemName: 'Pan cake', imageUrl: './assets/images/pos_imgs/10.jpg', unitPrice: 35},
   ];
 
   itemArray: FormArray;

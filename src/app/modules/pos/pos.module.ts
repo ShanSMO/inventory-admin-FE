@@ -6,6 +6,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {NgNumberPickerModule} from '../../libs/ng-number-picker/ng-number-picker.module';
 import { FoodPosComponent } from './food-pos/food-pos.component';
 import { PosLayoutComponent } from './pos-layout/pos-layout.component';
+import {PaginationModule} from "../../libs/pagination/pagination.module";
 
 const routes: Routes = [
   {path: '', component: PosLayoutComponent, children: [
@@ -22,6 +23,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     NgNumberPickerModule,
+    PaginationModule
   ]
 })
 export class PosModule { }
