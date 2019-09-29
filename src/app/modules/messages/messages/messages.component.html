@@ -1,1 +1,82 @@
-<p>messages works!</p>
+<div class="p-15">
+
+
+  <div class="chat-layout">
+
+    <div class="contacts">
+      <div style="height: 50px;width: 50px;border-bottom: 1px solid #c6c6c6;">
+        <div class="middle-al text-center" style="font-size: 18px;color: #898989;">
+          <span>
+            <i class="fa fa-sliders" aria-hidden="true"></i>
+          </span>
+        </div>
+      </div>
+      <div style="height: 50px;width: 50px;padding: 5px;border-bottom: 1px solid #c6c6c6" *ngFor="let chatter of onlineChatters">
+        <div class="chatter-rc-ind">
+          <div class="middle-al">
+            <span>S</span>
+          </div>
+          <div style="width: 10px;height: 10px;position: absolute;background: #4c9a65;border-radius: 50px;top: 0;right: 0;border: 1px solid #fff;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Chat div -->
+    <div class="full-width full-height" style="position: relative;">
+      <div class="chatter-inf">
+        <div style="display: inline-flex;width: 100%;height: 100%;">
+          <div style="width: 50px;">
+            <div class="chatter-rc-ind middle-al">
+              <div class="middle-al">
+                <span>S</span>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="middle-al" style="padding: 0 10px;">
+              <p class="em-bd-sender">Shanaka Madushanka</p>
+              <p class="em-bd-rs">
+                <span class="status-badge">Online</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="full-height p-5">
+        <!-- msg -->
+        <div class="msg-body m-right">
+          Hi,
+        </div>
+        <div class="msg-body m-left">
+          Hi there, So how are you.I am fine.So why did you send me a message ?.
+        </div>
+        <div class="msg-body m-right">
+          I am fine and well.I am going to start a new compnay.I need a logo from you.How much for the logo.?
+          I need a 3D logo.
+        </div>
+        <div class="msg-body m-left">
+          Ah. 10 $ for a 3D logo with Unlimited revisions.
+        </div>
+        <div class="msg-body m-right">
+          Ok, Then can you create a offer for it ?
+        </div>
+      </div>
+
+      <div class="full-width full-height p-5" >
+        <div class="text-inp-area full-width">
+          <textarea class="full-width full-height inp-txt-area" placeholder="Enter text here ..."></textarea>
+          <button class="btn-suc-g full-width">
+            <span>Send</span>
+            <span class="m-l-10">
+            <i class="fa fa-paper-plane-o"></i>
+          </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

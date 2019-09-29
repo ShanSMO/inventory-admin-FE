@@ -13,6 +13,7 @@ import {BillingComponent} from "./modules/settings/billing/billing.component";
 import {MessageLayoutComponent} from "./modules/messages/message-layout/message-layout.component";
 import {NotificationsComponent} from "./modules/messages/notifications/notifications.component";
 import {EmailsComponent} from "./modules/messages/emails/emails.component";
+import {MessagesComponent} from "./modules/messages/messages/messages.component";
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
     {path: '', component: MessageLayoutComponent, children: [
       {path: 'notification', component: NotificationsComponent},
       {path: 'emails', component: EmailsComponent},
+      {path: 'messages', component: MessagesComponent},
     ]},
     {path: 'sales', loadChildren: () => import('src/app/modules/pos/pos.module').then(m => m.PosModule)}
   ]},

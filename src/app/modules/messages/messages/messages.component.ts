@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessagesComponent implements OnInit {
 
+  onlineChatters: any [] = [
+    {},
+    {},
+    {},
+    {},
+    {}
+  ];
+
   constructor() { }
 
   ngOnInit() {
