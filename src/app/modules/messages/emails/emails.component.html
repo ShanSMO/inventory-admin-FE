@@ -1,87 +1,101 @@
 <div class="p-15">
 
   <div class="row m-0" style="height: 500px;background: #fff;">
-
-    <div class="col-md-4 p-0">
-      <div class="p-5 text-center">
-        <h5 class="n-title">Inbox</h5>
-      </div>
-
-      <div *ngFor="let email of threadQ" style="padding: 5px 5px 0 5px">
-        <div class="eml">
-          <div class="full-height" style="width: 50px;padding: 10px;">
-            <div class="em-rc-ind middle-al">
-              <div class="middle-al">
-                <span>S</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="full-height full-width">
-            <div class="middle-al" style="padding: 0 10px;">
-              <div class="eml-title">{{email.emailSubject}}</div>
-              <div class="eml-si-desc">{{email.body}}</div>
-            </div>
-          </div>
-
-          <div class="full-height" style="width: 50px;padding: 5px;">
-            <div class="middle-al">
-              <span>
-                <i class="fa fa-envelope-o" *ngIf="!email.viewStatus"></i>
-                <i class="fa fa-envelope-open-o" *ngIf="email.viewStatus"></i>
-              </span>
-            </div>
-          </div>
-
-          <div class="em-res-time">
-            {{email.dateTime}}
-          </div>
-        </div>
+    <div class="col-md-2 p-0">
+      <div class="email-side-nav-cont p-5">
+        <ul class="email-side-nav">
+          <li>All</li>
+          <li>Inbox (10) </li>
+          <li>Sent</li>
+          <li>Draft (2)</li>
+          <li>Spam</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Body -->
-    <div class="col-md-8 p-5">
-      <div class="em-body-cont">
+    <div class="col-md-10 row m-0 p-0">
 
-        <!-- Email details-->
-        <div class="em-details">
+      <div class="col-md-4 p-0">
+        <div class="p-5 text-center">
+          <h5 class="n-title">Inbox</h5>
+        </div>
 
-          <div style="display: inline-flex;">
-            <div class="full-height"style="width: 50px;padding: 10px;">
-              <div class="em-rc-ind">
+        <div *ngFor="let email of threadQ" style="padding: 5px 5px 0 5px">
+          <div class="eml">
+            <div class="full-height" style="width: 50px;padding: 10px;">
+              <div class="em-rc-ind middle-al">
                 <div class="middle-al">
                   <span>S</span>
                 </div>
               </div>
             </div>
-            <div>
+
+            <div class="full-height full-width">
               <div class="middle-al" style="padding: 0 10px;">
-                <p class="em-bd-sender">Shanaka M(<span>madushanka991@gmail.com</span>)</p>
-                <p class="em-bd-rs">madmax.ever@gmail.com, me </p>
+                <div class="eml-title">{{email.emailSubject}}</div>
+                <div class="eml-si-desc">{{email.body}}</div>
               </div>
             </div>
-          </div>
 
+            <div class="full-height" style="width: 50px;padding: 5px;">
+              <div class="middle-al">
+              <span>
+                <i class="fa fa-envelope-o" *ngIf="!email.viewStatus"></i>
+                <i class="fa fa-envelope-open-o" *ngIf="email.viewStatus"></i>
+              </span>
+              </div>
+            </div>
+
+            <div class="em-res-time">
+              {{email.dateTime}}
+            </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Email Bbody -->
-        <div class="em-body">
-          <div class="text-center">
-            <h4>Employeement Confirmation</h4>
+      <!-- Body -->
+      <div class="col-md-8 p-5">
+        <div class="em-body-cont">
+
+          <!-- Email details-->
+          <div class="em-details">
+
+            <div style="display: inline-flex;">
+              <div class="full-height"style="width: 50px;padding: 10px;">
+                <div class="em-rc-ind">
+                  <div class="middle-al">
+                    <span>S</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="middle-al" style="padding: 0 10px;">
+                  <p class="em-bd-sender">Shanaka M(<span>madushanka991@gmail.com</span>)</p>
+                  <p class="em-bd-rs">madmax.ever@gmail.com, me </p>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          Dear Candidate,<br><br>
+          <!-- Email Bbody -->
+          <div class="em-body">
+            <div class="text-center">
+              <h4>Employeement Confirmation</h4>
+            </div>
 
-          We thank you for selecting Cambio as a preferred employer.
+            Dear Candidate,<br><br>
 
-          This communication is to confirm that we have received your application for employment.
-          We will carefully review your details and revert to you should your experience and
-          qualifications correspond with the currently available opportunities in the organization.
+            We thank you for selecting Cambio as a preferred employer.
 
-          We wish you all success in your future endeavors.
+            This communication is to confirm that we have received your application for employment.
+            We will carefully review your details and revert to you should your experience and
+            qualifications correspond with the currently available opportunities in the organization.
 
-          Please note that only shortlisted candidates will be contacted
+            We wish you all success in your future endeavors.
+
+            Please note that only shortlisted candidates will be contacted
+          </div>
         </div>
       </div>
     </div>
