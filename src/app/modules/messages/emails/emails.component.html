@@ -1,1 +1,56 @@
-<p>emails works!</p>
+<div class="p-15">
+
+  <div class="row m-0" style="background: #fff;">
+
+    <!-- Q -->
+    <div class="col-md-4 p-0" style="background: #d4d4d4">
+
+      <div *ngFor="let email of threadQ">
+
+        <div class="eml">
+
+          <div class="full-height" style="width: 80px;padding: 5px;">
+            <div class="em-rc-ind middle-al">
+              <div class="middle-al">
+                <span>S</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="full-height full-width">
+            <div class="middle-al">
+              <div class="eml-title">{{email.emailSubject}}</div>
+              <div class="eml-si-desc">Simple Description</div>
+            </div>
+          </div>
+
+          <div class="full-height" style="width: 50px;padding: 5px;">
+            <div class="middle-al">
+              <span>
+                <i class="fa fa-envelope-o"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="em-res-time">
+            {{email.dateTime}}
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+    <!-- Body -->
+    <div class="col-md-8" style="background: #d4d4d4">
+
+    </div>
+
+
+  </div>
+
+</div>
