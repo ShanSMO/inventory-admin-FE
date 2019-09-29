@@ -1,3 +1,5 @@
+@import "../../../../assets/css/themes/colors"
+
 .eml
   display: inline-flex
   height: 100px
@@ -7,7 +9,7 @@
   transition: 0.2s
   position: relative
   border-radius: 3px
-  border: 1px solid #e5e5e5
+  border: 1px solid $border-color-g
 
 .eml-active
   background: #bfffca
@@ -50,20 +52,21 @@
   font-size: 15px
   text-align: center
   padding: 5px
-  background: #3f8d8c
   border-radius: 3px
-  color: #fff
   font-weight: 600
+  height: 35px
+  color: #545454
+  border: 1px solid $border-color-g
 
 .em-body-cont
   width: 100%
   height: 100%
-  border: 1px solid #e4e4e4
+  border: 1px solid $border-color-g
   border-radius: 3px
 
 .em-details
   height: 100px
-  border-bottom: 1px solid #cecece
+  border-bottom: 1px solid $border-color-g
   width: 100%
   border-radius: 3px 3px 0 0
 
@@ -92,15 +95,20 @@
   list-style: none
   padding: 0
   border-radius: 3px
-  border: 1px solid #cecece
+  border: 1px solid $border-color-g
   li
     padding: 10px 15px
     font-size: 13px
     color: #444
     background: #f5f5f5
-    border-bottom: 1px solid #cecece
+    border-bottom: 1px solid $border-color-g
     cursor: pointer
   li:last-child
     border-bottom: none
 
 .email-side-nav-cont
+
+.em-compose-btn
+  background: #0ab3ab
+  border: 1px solid #0ab3ab
+  color: #fff

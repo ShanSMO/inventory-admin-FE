@@ -79,6 +79,10 @@
   margin-right: 15px;
 }
 
+.m-l-10 {
+  margin-left: 10px;
+}
+
 input[type=text], input[type=password], input[type=tel], input[type=date], select {
   border-radius: 3px;
   height: 35px;
@@ -254,6 +258,14 @@ table tbody {
 table tbody tr td {
   border: none !important;
   padding: 5px !important;
+}
+
+.badge-or {
+  background: #de8808;
+  padding: 0 5px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
 }
 
 html {
