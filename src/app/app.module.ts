@@ -9,7 +9,6 @@ import {ChartsModule} from './modules/charts/charts.module';
 import {MessagesModule} from './modules/messages/messages.module';
 import {SettingsModule} from './modules/settings/settings.module';
 import {PosModule} from './modules/pos/pos.module';
-import {NotificationsMessagesModule} from "./modules/notifications-messages/notifications-messages.module";
 
 @NgModule({
   declarations: [

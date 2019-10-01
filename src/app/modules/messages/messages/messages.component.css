@@ -107,4 +107,51 @@
   font-size: 10px;
 }
 
+.chat-list-ctrl {
+  height: 50px;
+  width: 50px;
+  border-bottom: 1px solid #c6c6c6;
+  cursor: pointer;
+  color: #898989;
+  transition: 0.2s;
+}
+
+.chat-list-ctrl:hover {
+  color: #ffffff;
+  background: #9abece;
+}
+
+.onl-chatter {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+  border-bottom: 1px solid #c6c6c6;
+}
+.onl-chatter .onl-status-ind {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  background: #4c9a65;
+  border-radius: 50px;
+  top: 0;
+  right: 0;
+  border: 1px solid #fff;
+}
+
+.chat-box-ctrl {
+  height: 50px;
+  width: 50px;
+  border-top: 1px solid #c6c6c6;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  transition: 0.2s;
+  color: #898989;
+}
+
+.chat-box-ctrl:hover {
+  color: #ffffff;
+  background: #9abece;
+}
+
 /*# sourceMappingURL=messages.component.css.map */

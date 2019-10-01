@@ -4,20 +4,27 @@
   <div class="chat-layout">
 
     <div class="contacts">
-      <div style="height: 50px;width: 50px;border-bottom: 1px solid #c6c6c6;">
-        <div class="middle-al text-center" style="font-size: 18px;color: #898989;">
+      <div (click)="expandOrCollapse()" class="chat-list-ctrl">
+        <div class="middle-al text-center" style="font-size: 18px;">
           <span>
             <i class="fa fa-sliders" aria-hidden="true"></i>
           </span>
         </div>
       </div>
-      <div style="height: 50px;width: 50px;padding: 5px;border-bottom: 1px solid #c6c6c6" *ngFor="let chatter of onlineChatters">
+      <div class="onl-chatter" *ngFor="let chatter of onlineChatters">
         <div class="chatter-rc-ind">
           <div class="middle-al">
             <span>S</span>
           </div>
-          <div style="width: 10px;height: 10px;position: absolute;background: #4c9a65;border-radius: 50px;top: 0;right: 0;border: 1px solid #fff;">
+          <div class="onl-status-ind">
           </div>
+        </div>
+      </div>
+      <div (click)="expandOrCollapseContacts()" class="chat-box-ctrl">
+        <div class="middle-al text-center" style="font-size: 18px;">
+          <span>
+            <i class="fa fa-caret-right" aria-hidden="true"></i>
+          </span>
         </div>
       </div>
 
@@ -45,30 +52,22 @@
         </div>
       </div>
 
-      <div class="full-height p-5">
+      <div id="chat-cont-div" class="full-height p-5 chat-cont-div" style="position: absolute;
+    top: 50px;
+    bottom: 160px;
+    overflow-y: auto;">
         <!-- msg -->
-        <div class="msg-body m-right">
-          Hi,
+        <div *ngFor="let message of messageThread" [class]="message.type == 'L' ? 'msg-body m-left' : 'msg-body m-right'">
+          {{message.message}}
         </div>
-        <div class="msg-body m-left">
-          Hi there, So how are you.I am fine.So why did you send me a message ?.
-        </div>
-        <div class="msg-body m-right">
-          I am fine and well.I am going to start a new compnay.I need a logo from you.How much for the logo.?
-          I need a 3D logo.
-        </div>
-        <div class="msg-body m-left">
-          Ah. 10 $ for a 3D logo with Unlimited revisions.
-        </div>
-        <div class="msg-body m-right">
-          Ok, Then can you create a offer for it ?
-        </div>
+
+
       </div>
 
       <div class="full-width full-height p-5" >
         <div class="text-inp-area full-width">
-          <textarea class="full-width full-height inp-txt-area" placeholder="Enter text here ..."></textarea>
-          <button class="btn-suc-g full-width">
+          <textarea [(ngModel)]="chatMessage" class="full-width full-height inp-txt-area" placeholder="Enter text here ..."></textarea>
+          <button class="btn-suc-g full-width" (click)="sendMessage()">
             <span>Send</span>
             <span class="m-l-10">
             <i class="fa fa-paper-plane-o"></i>
