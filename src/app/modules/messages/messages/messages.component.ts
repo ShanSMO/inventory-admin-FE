@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-messages',
@@ -30,6 +31,30 @@ export class MessagesComponent implements OnInit {
 
   chatMessage: any = null;
 
+
+
+  tenderItems: any[] = [
+    {supplierProductName: 'product a'},
+    {supplierProductName: 'product b'},
+    {supplierProductName: 'product c'},
+    {supplierProductName: 'product d'},
+    {supplierProductName: 'product e'},
+    {supplierProductName: 'product f'},
+    {supplierProductName: 'product g'},
+    {supplierProductName: 'product h'},
+    {supplierProductName: 'product i'}
+  ];
+
+
+
+
+
+
+
+  selectedTenderItem: any = null;
+
+
+
   ngOnInit() {
   }
 
@@ -46,11 +71,39 @@ export class MessagesComponent implements OnInit {
     const messageBody = {id: 1, message: this.chatMessage, type: 'R' , dateTime: ''};
     this.messageThread.push(messageBody);
     this.chatMessage = null;
-    const element = document.getElementById('chat-cont-div');
-    console.log(element.scrollHeight);
-    element.scrollTop = element.scrollHeight - 50;
-    // window.scrollTo(0, document.querySelector('.chat-cont-div').scrollHeight);
-    // element.scrollIntoView(false);
+    // const element = document.getElementById('chat-cont-div');
+    // element.scrollTop = element.scrollHeight - 50;
+
+
+    const objDiv = document.getElementById('chat-cont-div');
+    objDiv.scrollTop = objDiv.scrollHeight + 100;
+  }
+  selectEvaluationItem(tenderItem) {
+    if (tenderItem === 'GENERAL') {
+      this.selectedTenderItem = 'GENERAL';
+    } else {
+      this.selectedTenderItem = tenderItem.tenderItemId;
+    }
   }
 
+  currentPosition: any = 0;
+  scrollItems(direction) {
+
+    console.log($('#items-block').get(0).scrollWidth);
+
+    switch (direction) {
+      case 'L' : {
+        if (this.currentPosition > 0) {
+          this.currentPosition = this.currentPosition - 100;
+        }
+
+        $('#items-block').scrollLeft(this.currentPosition);
+      }          break;
+      case 'R' : {
+        this.currentPosition = this.currentPosition + 100;
+        $('#items-block').scrollLeft(this.currentPosition);
+      }          break;
+      default: {}  break;
+    }
+  }
 }

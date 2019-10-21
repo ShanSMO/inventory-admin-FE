@@ -1,6 +1,37 @@
 <div class="p-15">
 
 
+  <div class="tender-item-div" style="position:relative;width: 500px;">
+    <div class="arrow-btn arrow-btn-l" (click)="scrollItems('L')">
+      <div class="middle-align">
+                <span>
+                    <i class="fa fa-chevron-left"></i>
+                </span>
+      </div>
+    </div>
+    <div class="middle-align">
+      <div style="overflow: hidden;white-space: nowrap;" id="items-block">
+        <div style="padding: 0 5px;    display: inline;" (click)="selectEvaluationItem('GENERAL')">
+          <button [class]="selectedTenderItem == 'GENERAL' ? 'tender-item general active-item' : 'tender-item general' ">General</button>
+        </div>
+        <div style="padding: 0 5px;    display: inline;" *ngFor="let tenderItem of tenderItems">
+          <button  [class]="selectedTenderItem == tenderItem.tenderItemId ? 'tender-item active-item' : 'tender-item' " (click)="selectEvaluationItem(tenderItem)" >
+            {{tenderItem.supplierProductName}}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="arrow-btn arrow-btn-r" (click)="scrollItems('R')">
+      <div class="middle-align">
+                <span>
+                    <i class="fa fa-chevron-right"></i>
+                </span>
+      </div>
+    </div>
+  </div>
+
+
+
   <div class="chat-layout">
 
     <div class="contacts">
@@ -52,7 +83,7 @@
         </div>
       </div>
 
-      <div id="chat-cont-div" class="full-height p-5 chat-cont-div" style="position: absolute;
+      <div id="chat-cont-div" class="full-height p-5 chat-cont-div" style="position: absolute;transition: 0.2s;
     top: 50px;
     bottom: 160px;
     overflow-y: auto;">
